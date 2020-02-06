@@ -22,41 +22,39 @@ namespace Password_Strength
 
         }
 
-        private void btnEstimateStrength_Click(object sender, EventArgs e)
-        {
-            string password = txtPassword.Text;
-
-            if (password.Length > 10)
-            {
-                lblResult.Text = "Good";
-                lblResult.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                lblResult.Text = "Bad";
-                lblResult.BackColor = Color.Red;
-            }
-        }
+       
 
         private void btnEstimateStrength_Click_1(object sender, EventArgs e)
         {
+            //Created a variable to store user input in password textbox.
             string password = txtPassword.Text;
 
+            //Conditions to check whether the password is good, bad or ok.
             if (password.Length > 10 && password.Any(char.IsDigit) && password.Any(char.IsLetter) && password.Any(char.IsPunctuation))
             {
+                //if the password is good then the label display the word "good".
                 lblResult.Text = "Good";
+
+                //making the label to be color green when the password is good.
                 lblResult.BackColor = Color.LightGreen;
             }
             else if (password.Length > 5 && password.Any(char.IsDigit) && password.Any(char.IsLetter))
             {
+                //if the password is ok then the label display the word "ok".
                 lblResult.Text = "Ok";
+                //making the label to be color orange when the password is ok.
                 lblResult.BackColor = Color.Orange;
             }
             else
             {
+                //if the password is bad then the label display the word "bad".
                 lblResult.Text = "Bad";
-                lblResult.BackColor = Color.Red;
+
+                //making the label to be color red when the password is bad.
+                lblResult.BackColor = Color.Red;  
             }
         }
+
+       
     }
 }

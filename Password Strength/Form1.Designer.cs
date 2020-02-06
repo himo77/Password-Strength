@@ -73,12 +73,15 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnEstimateStrength;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(758, 578);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnEstimateStrength);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Password Strength Estimator";
             this.ResumeLayout(false);
             this.PerformLayout();
